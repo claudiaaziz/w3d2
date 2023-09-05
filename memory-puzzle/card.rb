@@ -7,11 +7,11 @@ class Card
     end
 
     def hide
-        @value = "" if @face == "face-down"
+        @face = "face-down"
     end
 
     def reveal
-        @value if @face == "face-up"
+        @face = "face-up"
     end
 
     def to_s
