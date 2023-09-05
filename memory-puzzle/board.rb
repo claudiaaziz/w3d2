@@ -17,7 +17,6 @@ class Board
 
     def render
         @grid.each {|row| puts row.join(' ')}
-        # print @grid
     end
 
     def won?
@@ -32,5 +31,16 @@ class Board
         true
     end
 
+    def reveal(guessed_pos)
+        row = guessed_pos[0]
+        col = guessed_pos[1]
+
+        if @grid[row][col].face == "face-down"
+            @grid[row][col].reveal
+        end
+    end
+
 
 end
+
+
